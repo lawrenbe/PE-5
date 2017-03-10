@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The 7 Natural Wonders of the U.S.A</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="The 7 Natural Wonders of the U.S.A" />
+    <meta property="og:url" content="http://cdn.rawgit.com/jakobzhao/storymap/master/index.html" />
+    <meta property="og:description" content="This story map lists what I feel are the 7 greatest natural wonders in the U.S.A." />
+    <meta property="og:image" content="img/social.png" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
+    <!--facebook and info icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--use a better font for this web map-->
+    <link href='http://fonts.googleapis.com/css?family=Helvetica' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" type="text/css" href="css/storymap.css">
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="img/amflag.jpg" type="image/x-icon">
+
+    <!--add required libraries-->
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--story map plugin-->
+    <script src="js/storymap.js"></script>
+
+    <!-- bing map -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
+    <script src="http://gmaclennan.github.io/leaflet-bing-layer/leaflet-bing-layer.js"></script>
+
+    <!-- mini globle map -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="js/globeminimap.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 main">
+            <h2 class="page-header">7 Natural Wonders of the U.S.A. <br/>
+                <small style="font-size:12pt">Ben Lawrence, lawrenbe@oregonstate.edu Oregon State University</small></h2>
+            <section data-scene="overview">
+                <h1>The 7 Natural Wonders of the U.S.A</h1>
+                <p>Historians deem that the 7 wonders of the ancient world are as follows: The Pyramids of Giza, The Mausoleum at Halicarnassus,
+                    The Hanging Gardens of Babylon, The Colossus of Rhodes, Lighthouse of Alexandria, The Temple of Artemis at Ephesus,
+                    and The Statue of Zeus. These feats of human engineering and artistry amazed viewers for decades. However, they
+                    were not built to last. Today, only one remains.
+                    This list documents the greatest natural, unfleeting wonders that any American can visit without a passport. Come tour the U.S. and
+                    witness the beauty that nature endowed upon us.
+                </p>
+                <img src="img/amflag.jpg" class="img-responsive" alt="responsive image" alt-text="US Flag">
+            </section>
+
+            <section data-scene="grandcanyon">
+                <h2>The Grand Canyon, Arizona</h2>
+                <p>The Grand is a steep-sided canyon carved by the Colorado River in the U.S. state of Arizona in North America. It is contained within and managed by Grand Canyon National Park, the Kaibab National Forest, Grand Canyon-Parashant National Monument, the Hualapai Tribal Nation, the Havasupai people and the Navajo Nation. President Theodore Roosevelt was a major proponent of preservation of the Grand Canyon area, and visited it on numerous occasions to hunt and enjoy the scenery.</p>
+                <p>The Grand Canyon is 277 miles (446 km) long, up to 18 miles (29 km) wide and attains a depth of over a mile (6,093 feet or 1,857 meters). Nearly two billion years of Earth's geological history have been exposed as the Colorado River and its tributaries cut their channels through layer after layer of rock while the Colorado Plateau was uplifted. While some aspects about the history of incision of the canyon are debated by geologists, several recent studies support the hypothesis that the Colorado River established its course through the area about 5 to 6 million years ago. Since that time, the Colorado River has driven the down-cutting of the tributaries and retreat of the cliffs, simultaneously deepening and widening the canyon.</p>
+                <img src="img/grancan.jpg" class="img-responsive" alt="responsive image" alt-text="Grand Canyon">
+            </section>
+
+            <section data-scene="zion">
+                <h2>Zion National Park, Utah</h2>
+                <p>Zion National Park is located in the Southwestern United States, near Springdale, Utah. A prominent feature of the 229-square-mile (590 km2) park is Zion Canyon, which is 15 miles (24 km) long and up to half a mile (800 m) deep, cut through the reddish and tan-colored Navajo Sandstone by the North Fork of the Virgin River. The lowest elevation is 3,666 ft (1,117 m) at Coalpits Wash and the highest elevation is 8,726 ft (2,660 m) at Horse Ranch Mountain. Located at the junction of the Colorado Plateau, Great Basin, and Mojave Desert regions, the park's unique geography and variety of life zones allow for unusual plant and animal diversity. Numerous plant species as well as 289 species of birds, 75 mammals (including 19 species of bat), and 32 reptiles inhabit the park's four life zones: desert, riparian, woodland, and coniferous forest. Zion National Park includes mountains, canyons, buttes, mesas, monoliths, rivers, slot canyons, and natural arches.</p>
+                <img src="img/zion.jpg" class="img-responsive" alt="responsive image" alt-text="zion">
+            </section>
+
+            <section data-scene="craterlake">
+                <h2>Crater Lake, Oregon</h2>
+                <p>Crater Lake is a caldera lake in south-central Oregon in the western United States. It is the main feature of Crater Lake National Park and is famous for its deep blue color and water clarity. The lake partly fills a nearly 2,148-foot (655 m)-deep caldera[2] that was formed around 7,700 (± 150) years ago by the collapse of the volcano Mount Mazama. There are no rivers flowing into or out of the lake; the evaporation is compensated for by rain and snowfall at a rate such that the total amount of water is replaced every 250 years. With a depth of 1,949 feet (594 m), the lake is the deepest in the United States. In the world, it ranks tenth for maximum depth, and third for mean (average) depth.</p>
+                <p>The Klamath tribe of Native Americans, whose ancestors may have witnessed the collapse of Mount Mazama and the formation of Crater Lake, have long regarded the lake as a sacred site. Their legends tell of a battle between the sky god Skell and the god of the underworld Llao. Mount Mazama was destroyed in the battle, creating Crater Lake, called giiwas in the Klamath language. The Klamath people used Crater Lake in vision quests, which often involved climbing the caldera walls and other dangerous tasks. Those who were successful in such quests were often regarded as having more spiritual powers. The tribe still holds Crater Lake in high regard as a spiritual site.</p>
+                <img src="img/crater.jpg" class="img-responsive" alt="responsive image" alt-text="Crater Lake">
+            </section>
+
+            <section data-scene="yellowstone">
+                <h2>Yellowstone National Park, Wyoming and Montana</h2>
+                <p>Yellowstone National Park was established by the U.S. Congress and signed into law by President Ulysses S. Grant on March 1, 1872. Yellowstone was the first National Park in the U.S. and is also widely held to be the first national park in the world. The park is known for its wildlife and its many geothermal features, especially Old Faithful Geyser. It has many types of ecosystems, but the subalpine forest is the most abundant. It is part of the South Central Rockies forests ecoregion.</p>
+                <p>Native Americans have lived in the Yellowstone region for at least 11,000 years.
+                    Yellowstone National Park spans an area of 3,468.4 square miles (8,983 km2), comprising lakes, canyons, rivers and mountain ranges. Yellowstone Lake is one of the largest high-elevation lakes in North America and is centered over the Yellowstone Caldera, the largest supervolcano on the continent. The caldera is considered an active volcano. It has erupted with tremendous force several times in the last two million years. Half of the world's geothermal features are in Yellowstone, fueled by this ongoing volcanism. Lava flows and rocks from volcanic eruptions cover most of the land area of Yellowstone. The park is the centerpiece of the Greater Yellowstone Ecosystem, the largest remaining nearly-intact ecosystem in the Earth's northern temperate zone</p>
+                <img src="img/faithful.jpg" class="img-responsive" alt="responsive image" alt-text="Old Faithful">
+            </section>
+
+            <section data-scene="niagra">
+                <h2>Niagra Falls, New York</h2>
+                <p>The Niagara Falls are famed both for their beauty and as a valuable source of hydroelectric power. Balancing recreational, commercial, and industrial uses has been a challenge for the stewards of the falls since the 19th century.</p>
+                <p>Niagara Falls were formed when glaciers receded at the end of the Wisconsin glaciation (the last ice age), and water from the newly formed Great Lakes carved a path through the Niagara Escarpment en route to the Atlantic Ocean. While not exceptionally high, the Niagara Falls are very wide. More than six million cubic feet (168,000 m3) of water falls over the crest line every minute in high flow, and almost four million cubic feet (110,000 m3) on average.</p>
+                <img src="img/niagra.jpg" class="img-responsive" alt="responsive image" alt-text="Niagra falls">
+            </section>
+
+            <section data-scene="redwood">
+                <h2>Redwood National and State Parks, California</h2>
+                <p>The Redwood National and State Parks (RNSP) are old-growth temperate rainforests located in the United States, along the coast of northern California. Comprising Redwood National Park (established 1968) and California's Del Norte Coast, Jedediah Smith, and Prairie Creek Redwoods State Parks (dating from the 1920s), the combined RNSP contain 139,000 acres (560 km2).[3] Located entirely within Del Norte and Humboldt Counties, the four parks, together, protect 45% of all remaining coast redwood (Sequoia sempervirens) old-growth forests, totaling at least 38,982 acres (157.75 km2). These trees are the tallest and one of the most massive tree species on Earth. In addition to the redwood forests, the parks preserve other indigenous flora, fauna, grassland prairie, cultural resources, portions of rivers and other streams, and 37 miles (60 km) of pristine coastline.</p>
+                <img src="img/redwoods.jpg" class="img-responsive" alt="responsive image" alt-text="Redwood trees">
+
+            </section>
+            <section data-scene="denali">
+                <h2>Denali, Alasksa</h2>
+                <p>Denali is the highest mountain peak in North America, with a summit elevation of 20,310 feet (6,190 m) above sea level. With a topographic prominence of 20,156 feet (6,144 m) and a topographic isolation of 4,629 miles (7,450 km), Denali is the third most prominent and third most isolated peak after Mount Everest and Aconcagua. Located in the Alaska Range in the interior of the U.S. state of Alaska, Denali is the centerpiece of Denali National Park and Preserve.</p>
+                <p>The Koyukon people who inhabit the area around the mountain have referred to the peak as "Denali" for centuries. In 1896, a gold prospector named it "Mount McKinley" in support of then-presidential candidate William McKinley; that name was the official name recognized by the United States government from 1917 until 2015. In August 2015, following the 1975 lead of the state of Alaska, the U.S. Department of the Interior announced the change of the official name of the mountain to Denali. Prior to this, most Alaskans already referred to the mountain as Denali.</p>
+                <img src="img/denali.jpg" class="img-responsive" alt="responsive image" alt-text="Denali">
+            </section>
+            <!--add a arrow for scrolling down the texts-->
+            <div class="glyphicon glyphicon-menu-down glyphicon-align-center arrow-down"></div>
+        </div>
+        <!--map div-->
+        <div id="map" class="col-sm-6 col-md-8 sidebar"></div>
+
+    </div>
+    <!--facebook icon-->
+    <a class="fa fa-facebook-square btn" href="https://facebook.com/sharer.php?u=http://cdn.rawgit.com/jakobzhao/storymap/master/index.html" target="_blank"></a>
+    <!--info icon-->
+    <i class="fa fa-info-circle btn" style="top:50px" data-toggle="modal" data-target="#info-modal"></i>
+
+    <!--the info page-->
+    <div class="modal fade" id="info-modal" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This is a web map of what I feel are the 7 greatest natural wonders of the U.S. It is mainly made as an assignment for a course GEOG 371: Web Mapping provided by Oregon State University. The story map library is derived from the storymap plugin for leaflet at <a>http://atlefren.github.io/storymap/</a>, and its functionality relies on both leaflet and Boostrap.</p>
+                    <p><b>storymap.js</b> | Released Date: 03/09/2017 | Version: 2.1 | MIT License </p>
+                    <p><b>Author: Ben LAwrence</b> | College of Earth, Ocean, Atmospheric Science | Oregon State University </p>
+                    <p>The context about natural features and national parks was collected from Wikipedia.</p>
+                    <p>The favicon image was acquired from <a>http://www.veteranstoday.com/2015/04/20/america-the-beautiful/</a></p>
+                    <p>This story map uses geospatial data from mapbox, Google Earth Engine, Microsoft Bing map, and Open Street Maps.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main javascript -->
+<script type="text/javascript">
+    /**
+     * Created by jakob on 2/22/2017.
+     */
+
+// Create Legend Contents in html format
+    var county_legend ='<i style="background: black; opacity: 0.5"></i><p><b>Counties</b></p>';
+    var corvallis_admin_legend = '<i style="background: orange; opacity: 0.5"></i><p><b>Corvallis</b></p>';
+    var forest_legend = '<i style="background: green; opacity: 0.5"></i><p><b>Forest</b></p>';
+
+    // For each layer, the first variable is the layer, the second is the legend. The layer variable can be any kinds of layers that leaflet.js supports.
+    // var layers = {
+    //      'layer1': [layer1, legend1]
+    //      'layer2': [layer2, legend2]
+    //      ...
+    // }
+
+    var layers = {
+        'bing' : [L.tileLayer.bing('AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L')],
+        'nps': [ L.geoJson.ajax('assets/nps.geojson',  {
+            color: 'orange',
+            weight: 2,
+            opacity: 1}),],
+        'corvallis admin': [L.geoJson.ajax('http://www.mapio.us/geoserver/ceoas/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ceoas:admin&outputFormat=application%2Fjson',          {
+            color: 'orange',
+            weight: 5}), corvallis_admin_legend],
+        'trails': [L.geoJson.ajax('assets/S_USDA.TrailNFS_Publish.geojson', {
+            color: 'orange',
+            weight: 200,
+            opacity: 0.3}), county_legend],
+        'forest cover 2010': [ L.tileLayer('http://earthengine.google.org/static/hansen_2013/tree_alpha/{z}/{x}/{y}.png'), forest_legend],
+        'satellite': [ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+            id: 'mapbox.satellite',
+        })]
+    };
+
+    var scenes = {
+        overview: {lat: 44, lng: -120.5, zoom: 4, layers: ['satellite']},
+        grandcanyon: {lat: 36.1, lng: -113, zoom: 9, layers: ['satellite', 'nps']},
+        zion: {lat: 37.296, lng: -113.2, zoom: 12, layers: ['bing']},
+        craterlake: {lat: 42.941, lng: -122.16, zoom: 12.5, layers:['bing']},
+        yellowstone: {lat: 44.4, lng: -110.6, zoom:8, layers:['satellite']},
+        niagra: {lat: 43.076, lng: -79.079, zoom: 16, layers: ['satellite']},
+        redwood: {lat: 41.6, lng: -124.1, zoom: 9, layers: ['satellite', 'nps']},
+        denali: {lat:63.08, lng: -151, zoom: 9, layers: ['satellite','forest cover 2010']}
+    };
+
+    $('.main').storymap({
+        scenes: scenes,
+        layers: layers,
+        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        createMap: function () {
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map('map', {zoomControl: false, scrollWheelZoom: false});
+
+            // add an base map, which can be either OSM, mapbox, tilelayer, wmslayer or those designed by yourself.
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+                maxZoom: 18,
+                attribution: '<a href="http://ceoas.oregonstate.edu/profile/zhao/" target="_blank">Bo Zhao</a>',
+                id: 'mapbox.light',
+                detectRetina: true
+            }).addTo(map);
+
+            L.control.scale({position: 'bottomright', metric: false}).addTo(map);
+
+            // create a mini globe as the overview map control.
+            var miniMap = new L.Control.GlobeMiniMap({
+                marker:'blue',
+                position: 'bottomright'
+            }).addTo(map);
+
+            return map;
+        }
+    });
+</script>
+</body>
+</html>
